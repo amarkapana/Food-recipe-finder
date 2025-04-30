@@ -1,0 +1,51 @@
+body{
+    background-image: url("https://c4.wallpaperflare.com/wallpaper/854/972/859/vegetables-rice-still-life-dark-wallpaper-preview.jpg");
+    min-height: 100vh;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form{
+    color: white;
+}
+.login-cont{
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(2px);
+}
+a{
+    color: white;
+}
+h1{
+    color: white;
+}
+button{
+    background-color: #04AA6D; 
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 8px 10px 8px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+}
+input{
+    padding: 5px 10px 5px 10px ;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+}
+input::placeholder{
+    color: black;
+    font-family: roboto;
+}
+form label{
+    font-weight: bold;
+}
