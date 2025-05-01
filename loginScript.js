@@ -15,7 +15,7 @@ document.getElementById("login-form").addEventListener("submit", function (e) {
         localStorage.setItem("loggedInUser", username);
 
         // Redirect to home page
-        window.location.href = "home.html";  // Ensure home.html is your home page
+        window.location.href = "home.html";  
     } else {
         alert("Invalid username or password");
     }
