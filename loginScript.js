@@ -9,6 +9,6 @@ document.getElementById('login-form').addEventListener('submit', function(event)
         localStorage.setItem('loggedInUser', username);  // Save login state
         window.location.href = 'home.html';
     } else {
-        alert('Invalid username or password. Please try again.');
+        alert('Invalid username or password. Please try again. DO you have an account ? Please register');
     }
 });
