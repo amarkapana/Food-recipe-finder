@@ -8,9 +8,12 @@ document.getElementById("login-form").addEventListener("submit", function (e) {
     const storedPassword = localStorage.getItem("password");
 
     if (username === storedUsername && password === storedPassword) {
-        // ✅ Redirect to home page using relative path
+        // Mark user as logged in
+        localStorage.setItem("loggedIn", "true");
+
+        // Redirect to home page
         window.location.href = "./index.html";
     } else {
-        alert("Invalid username or password or If you dont have an acc pls register.");
+        alert("Invalid username or password");
     }
 });
