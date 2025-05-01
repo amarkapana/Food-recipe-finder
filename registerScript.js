@@ -11,5 +11,5 @@ document.getElementById("register-form").addEventListener("submit", function (e)
     alert("Registration successful. You can now login.");
 
     // Redirect to login page (index.html)
-    window.location.href = "index.html";  // Ensure index.html is the login page
+    window.location.href = "index.html";  
 });
