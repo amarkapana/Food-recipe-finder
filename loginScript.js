@@ -11,6 +11,6 @@ document.getElementById("login-form").addEventListener("submit", function (e) {
         // ✅ Redirect to home page using relative path
         window.location.href = "./index.html";
     } else {
-        alert("Invalid username or password");
+        alert("Invalid username or password or If you dont have an acc pls register.");
     }
 });
