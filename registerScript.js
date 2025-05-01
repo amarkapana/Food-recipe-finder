@@ -12,7 +12,7 @@ document.getElementById("register-form").addEventListener("submit", function (e)
         alert("Registration successful! Redirecting to login...");
 
         // ✅ Redirect to login page using relative path
-        window.location.href = "./login.html";
+        window.location.href = "./index.html";
     } else {
         alert("Please enter both username and password.");
     }
