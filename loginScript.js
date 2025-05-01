@@ -1,14 +1,16 @@
-document.getElementById('login-form').addEventListener('submit', function(event) {
-    event.preventDefault();
+document.getElementById("login-form").addEventListener("submit", function (e) {
+    e.preventDefault();
 
-    var username = document.getElementById('username').value;
-    var password = document.getElementById('password').value;
+    const username = document.getElementById("username").value.trim();
+    const password = document.getElementById("password").value.trim();
 
-    // Check credentials
-    if (localStorage.getItem(username) === password) {
-        localStorage.setItem('loggedInUser', username);  // Save login state
-        window.location.href = 'home.html';
+    const storedUsername = localStorage.getItem("username");
+    const storedPassword = localStorage.getItem("password");
+
+    if (username === storedUsername && password === storedPassword) {
+        // ✅ Redirect to home page using relative path
+        window.location.href = "./index.html";
     } else {
-        alert('Invalid username or password. Please try again. DO you have an account ? Please register.');
+        alert("Invalid username or password");
     }
 });
