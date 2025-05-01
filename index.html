@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 
-
 <body>
+    <!-- Check if the user is logged in, if not, redirect to login page -->
     <script>
         const loggedIn = localStorage.getItem("loggedIn");
         if (loggedIn !== "true") {
@@ -18,9 +18,10 @@
         }
     </script>
     
+    <!-- Logout button -->
     <button id="logoutBtn" style="position: absolute; top: 20px; right: 20px; padding: 10px; background-color: #e74c3c; border: none; color: white; border-radius: 5px; cursor: pointer;">Logout</button>
-    <div class="main">
 
+    <div class="main">
         <h1>Food Recipe Finder</h1>
         <div class="search">
             <div class="search-box">
@@ -42,24 +43,17 @@
             <ul id="results"></ul>
         </div>
     </div>
+
     <script src="./script.js"></script>
-    <script>
-        if (!localStorage.getItem('loggedInUser')) {
-            window.location.href = 'login.html';
-        }
-    </script>
-    <script>
-        // Redirect to login if not logged in
-        if (!localStorage.getItem('loggedInUser')) {
-            window.location.href = 'login.html';
-        }
     
-        // Logout function
+    <!-- Logout Function -->
+    <script>
         document.getElementById('logoutBtn').addEventListener('click', function() {
-            localStorage.removeItem('loggedInUser');
-            window.location.href = 'login.html';
+            localStorage.removeItem('loggedIn');  // Remove the loggedIn status
+            localStorage.removeItem('loggedInUser');  // Optionally remove the user data
+            window.location.href = 'login.html';  // Redirect to login page
         });
     </script>
-    
+
 </body>
 </html>
