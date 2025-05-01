@@ -8,6 +8,15 @@
     <!-- Style CSS -->
     <link rel="stylesheet" href="./style.css">
 </head>
+<script>
+    // Check if user is logged in by looking for stored credentials
+    const username = localStorage.getItem("username");
+    if (!username) {
+        // Redirect to login page if not logged in
+        window.location.href = "./login.html";
+    }
+</script>
+
 <body>
     <button id="logoutBtn" style="position: absolute; top: 20px; right: 20px; padding: 10px; background-color: #e74c3c; border: none; color: white; border-radius: 5px; cursor: pointer;">Logout</button>
     <div class="main">
